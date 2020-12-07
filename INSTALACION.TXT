@@ -1,0 +1,48 @@
+INSTRUCCIONES DE INSTALACIÓN
+
+REALIZADO EN LARAVEL 5.1 (php 5.6) y POSTGRESQL 
+
+--REQUISITOS-- 
+
+TENER INSTALADO ALGUN SERVIDOR WEB CON PHP Y POSTGRE INSTALADO (EN MI CASO  USE LAMPP Y PGADMIN3 PARA POSTGRE)
+TENER INSTALADO COMPOSER 
+
+
+--INSTALACION--
+
+0 CREAR UNA BASE DE DATOS, COPIAR EL SCRIPTS SQL EN SU ADMIN DE POSTGRESQL Y SETEAR EL ARCHIVO .ENV
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1	
+DB_DATABASE=testgpscontrol
+DB_USERNAME=postgres  //si tiene otro usuario de postgre cambielo
+DB_PASSWORD=******    //su pass
+
+1 INSTALAR COLLECTIVE 
+
+agregar la linea
+
+"laravelcollective/html": "5.1.*"
+
+al archivo composer.json y ejecutar: composer update   ,desde el directorio donde se encuentra el proyecto
+
+
+2 COPIAR  BOOTSTRAP, JQUERY,  DATATABLES Y DATAPICKER A CARPETA PUBLIC
+
+copiar el contenido de la carpeta RECURSOS.zip en la carpeta public de laravel
+
+
+3 COPIAR CONTROLADOR, MODELO, VISTAS, REQUEST Y AÑADIR RUTAS A ARCHIVO ROUTES
+
+copiar UsuarioController.php en Controllers
+copiar Usuario.php en Models 
+copiar carpeta usuarios en views 
+copiar UsuarioCreateRequest.php y UsuarioUpdateRequest.php a la carpeta request
+copiar el contenido de routes.php a su archivo routes.php
+
+4 IR A LA URL EN SU NAVEGADOR PARA PROBARLO
+
+ir a la url para ejecutar , en este caso la mia es:
+http://127.0.0.1/testgpscontrol/public/usuario
+
+
